@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        <p>Рассчитаное количество отпускных <span th:text="${result}"></span> у. е.</p>
+        <p>
+            за <span th:text="${days}"></span>
+            <th:block th:switch="${days % 10}">
+                <span th:case="1" th:if="${days % 100 != 11}">день</span>
+                <span th:case="2" th:if="${days % 100 != 12}">дня</span>
+                <span th:case="3" th:if="${days % 100 != 13}">дня</span>
+                <span th:case="4" th:if="${days % 100 != 14}">дня</span>
+                <span th:case="*">дней</span>
+            </th:block>
+        </p>
+        <p>
+            при зарплате за 12 месяцев в <span th:text="${salary}"></span> у. е.
+        </p>
+    </div>
+</body>
+</html>
