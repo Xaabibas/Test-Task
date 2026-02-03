@@ -6,7 +6,9 @@
 </head>
 <body>
     <div>
-        <p>Рассчитаное количество отпускных <span th:text="${result}"></span> у. е.</p>
+        <p>
+            Рассчитаное количество отпускных <span th:text="${result}"></span> у. е.
+        </p>
         <p>
             за <span th:text="${days}"></span>
             <th:block th:switch="${days % 10}">

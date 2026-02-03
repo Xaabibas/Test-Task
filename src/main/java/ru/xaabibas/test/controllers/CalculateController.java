@@ -12,16 +12,31 @@ public class CalculateController {
     @Autowired
     private CalculateService service;
 
-    @GetMapping("/calculate")
+    @GetMapping(value = "/calculate", params = {"salary", "days"})
     public String calculate(
             @RequestParam double salary,
-            @RequestParam int days,
+            @RequestParam long days,
             Model model
     ) {
         String result = service.calculateByDays(salary, days);
         model.addAttribute("days", days);
         model.addAttribute("salary", salary);
         model.addAttribute("result", result);
-        return "index";
+        return "days";
+    }
+
+    @GetMapping(value = "/calculate", params = {"salary", "start", "end"})
+    public String calculate(
+            @RequestParam double salary,
+            @RequestParam String start,
+            @RequestParam String end,
+            Model model
+    ) {
+        String result = service.calculateByDates(salary, start, end);
+        model.addAttribute("start", start);
+        model.addAttribute("end", end);
+        model.addAttribute("salary", salary);
+        model.addAttribute("result", result);
+        return "dates";
     }
 }
