@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a25ebf1-42c7-4363-a547-d85eb8fe9280" name="Changes" comment="additional task" />
+    <list default="true" id="9a25ebf1-42c7-4363-a547-d85eb8fe9280" name="Changes" comment="simple exception handling">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/AppExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/AppExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/CalculateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/CalculateController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +58,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="minimal app" />
     <MESSAGE value="additional task" />
-    <option name="LAST_COMMIT_MESSAGE" value="additional task" />
+    <MESSAGE value="simple exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple exception handling" />
   </component>
 </project>
