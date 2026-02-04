@@ -33,8 +33,8 @@ public class CalculatorTest {
     @Test
     void testCalculateByDates() {
         BigDecimal salary = BigDecimal.valueOf(120000);
-        LocalDate start = LocalDate.of(2026, 1, 1);
-        LocalDate end = LocalDate.of(2026, 1, 15);
+        LocalDate start = LocalDate.of(2026, 1, 4);
+        LocalDate end = LocalDate.of(2026, 1, 23);
 
         BigDecimal result = calculator.calculateByDates(salary, start, end);
 

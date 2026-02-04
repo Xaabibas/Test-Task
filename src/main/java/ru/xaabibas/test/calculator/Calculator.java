@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -11,11 +12,11 @@ import java.time.temporal.ChronoUnit;
 public class Calculator {
     private static final BigDecimal AVERAGE_DAYS = BigDecimal.valueOf(29.3);
 
-    public BigDecimal calculateByDays(BigDecimal salary, long days) {
-        if (salary.intValue() <= 0 || days <= 0) {
+    public BigDecimal calculateByDays(BigDecimal salary, long workingDays) {
+        if (salary.intValue() <= 0 || workingDays <= 0) {
             throw new IllegalArgumentException();
         }
-        BigDecimal result = salary.multiply(BigDecimal.valueOf(days))
+        BigDecimal result = salary.multiply(BigDecimal.valueOf(workingDays))
                 .divide(AVERAGE_DAYS, 10, RoundingMode.HALF_UP)
                 .divide(BigDecimal.valueOf(12), 10, RoundingMode.HALF_UP)
                 .setScale(2, RoundingMode.HALF_UP);
@@ -26,7 +27,15 @@ public class Calculator {
         if (end.isBefore(start)) {
             throw new IllegalArgumentException();
         }
-        long days = ChronoUnit.DAYS.between(start, end);
-        return calculateByDays(salary, days);
+        long totalDays = ChronoUnit.DAYS.between(start, end);
+        long weekends = start.datesUntil(end)
+                .filter(
+                        date ->
+                            date.getDayOfWeek() == DayOfWeek.SATURDAY ||
+                                    date.getDayOfWeek() == DayOfWeek.SUNDAY
+
+                )
+                .count();
+        return calculateByDays(salary, totalDays - weekends);
     }
 }

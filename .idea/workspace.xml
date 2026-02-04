@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a25ebf1-42c7-4363-a547-d85eb8fe9280" name="Changes" comment="more exceptions handled">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/xaabibas/test/calculator/CalculatorTest.java" afterDir="false" />
+    <list default="true" id="9a25ebf1-42c7-4363-a547-d85eb8fe9280" name="Changes" comment="tests. all clear">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/calculator/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/AppExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/AppExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/CalculateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/controllers/CalculateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/services/CalculateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/xaabibas/test/services/CalculateService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +59,8 @@
     <MESSAGE value="simple exception handling" />
     <MESSAGE value="rest controllers" />
     <MESSAGE value="more exceptions handled" />
-    <option name="LAST_COMMIT_MESSAGE" value="more exceptions handled" />
+    <MESSAGE value="calculate on BigDecimal" />
+    <MESSAGE value="tests. all clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests. all clear" />
   </component>
 </project>
