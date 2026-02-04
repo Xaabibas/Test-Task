@@ -20,6 +20,9 @@ public class CalculateService {
     public String calculateByDates(double salary, String start, String end) {
         LocalDate startDate = LocalDate.parse(start, formatter);
         LocalDate endDate = LocalDate.parse(end, formatter);
+        if (endDate.isBefore(startDate)) {
+            throw new IllegalArgumentException();
+        }
         return calculator.calculateByDates(salary, startDate, endDate);
     }
 }
