@@ -20,7 +20,7 @@ public class AppExceptionHandler {
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<?> unprocessableEntity(IllegalArgumentException e) {
         return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY)
-                .body(Map.of("message", "Дата начала отпуска должна быть раньше его конца"));
+                .body(Map.of("message", "Дата начала отпуска должна быть раньше его конца. Средняя зарплата и количество дней должны быть положительными"));
     }
 
     @ExceptionHandler(DateTimeException.class)

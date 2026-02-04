@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.xaabibas.test.services.CalculateService;
 
+import java.math.BigDecimal;
+
 @RestController
 public class CalculateController {
     @Autowired
@@ -17,7 +19,7 @@ public class CalculateController {
             @RequestParam double salary,
             @RequestParam long days
     ) {
-        String result = service.calculateByDays(salary, days);
+        BigDecimal result = service.calculateByDays(salary, days);
         return ResponseEntity.ok(result);
     }
 
@@ -27,7 +29,7 @@ public class CalculateController {
             @RequestParam String start,
             @RequestParam String end
     ) {
-        String result = service.calculateByDates(salary, start, end);
+        BigDecimal result = service.calculateByDates(salary, start, end);
         return ResponseEntity.ok(result);
     }
 }
